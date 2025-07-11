@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Began interning at Princeton Research Computing as an RSE
+Began interning at Princeton Research Computing as a software engineer
+        

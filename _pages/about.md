@@ -14,7 +14,7 @@ news: true # includes a list of news items
 social: false # includes social icons at the bottom of the page
 ---
 
-Hi, I'm Manav Jairam!
+<span id="typing-text" style="font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace; font-size: 2rem;"></span>
 
 I recently completed my bachelor’s degree in Data Science at [UC San Diego](https://datascience.ucsd.edu/), where I worked with the [Rose Lab](https://roseyu.com/) on deploying epidemic simulators and AI models to production using FastAPI and GCP. I also spent time at [Princeton Research Computing](https://researchcomputing.princeton.edu/), where I contributed to algorithmic solvers for scientific research under Professor [Bartolomeo Stellato](https://stellato.io/).
 
@@ -26,3 +26,19 @@ I’ve also held roles in applied ML and software engineering at NanoMood, Intel
 
 
 Outside of work, I enjoy playing poker, long-distance running, and music festivals. I’m always on the lookout for interesting playlists—feel free to share yours on Spotify.
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const text = "Welcome!";
+    const element = document.getElementById('typing-text');
+    let index = 0;
+    function typeWriter() {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+    typeWriter();
+});
+</script>
