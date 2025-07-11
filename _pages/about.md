@@ -14,9 +14,15 @@ news: true # includes a list of news items
 social: false # includes social icons at the bottom of the page
 ---
 
-Hi! My name is Manav Jairam. I am a senior at the University of California, San Diego majoring in Data Science. I also have a keen interest in Entreprenership and Innovation, which is my minor!
+Hi, I'm Manav Jairam!
 
-I have a broad interest in Natural Language Processing, Operations Research and its applications in finance, and Recommender Systems. Specifically, I have experience in conducting research, working as a Data Scientist, managing various aspects of the Data Science project pipeline, and developing front-end applications.
+I recently completed my bachelor’s degree in Data Science at [UC San Diego](https://datascience.ucsd.edu/), where I worked with the [Rose Lab](https://roseyu.com/) on deploying epidemic simulators and AI models to production using FastAPI and GCP. I also spent time at [Princeton Research Computing](https://researchcomputing.princeton.edu/), where I contributed to algorithmic solvers for scientific research under Professor [Bartolomeo Stellato](https://stellato.io/).
 
-I also love playing pool, running and going to concerts! Add me on Spotify to share interesting playlists.
+My research interests lie at the intersection of **machine learning**, **operations research**, and **personalized decision-making systems**, with applications in **healthcare**, **finance**, and **policy**. I'm particularly excited about problems involving uncertainty, optimization, and human-AI interaction.
 
+Recently, I completed a paper on Paid Family Leave and the gender wage gap, advised by Prof. Gordon B. Dahl, reflecting my growing interest in econometrics and data-driven policy research.
+
+I’ve also held roles in applied ML and software engineering at NanoMood, Intellect Design Arena, and Chapter Apps, where I worked on everything from clinical knowledge graphs to LLM applications and front-end infrastructure.
+
+
+Outside of work, I enjoy playing poker, long-distance running, and music festivals. I’m always on the lookout for interesting playlists—feel free to share yours on Spotify.
