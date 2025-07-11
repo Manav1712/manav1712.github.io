@@ -1,10 +1,8 @@
 ---
-layout: cv
-permalink: /cv/
+layout: page
 title: cv
+permalink: /cv/
 nav: true
-nav_order: 5
-description: 
-toc:
-  sidebar: left
 ---
+
+[Download my resume (PDF)](/assets/resume.pdf)
