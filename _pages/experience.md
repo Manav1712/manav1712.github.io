@@ -22,42 +22,70 @@ p.s I made sure I got the best possible coffee at every location
     <div style="text-align: center;">
       <img src="{{ site.baseurl }}/assets/img/princeton-logo.png" 
            alt="Princeton University Logo" 
-           style="height: 60px; width: auto; max-width: 120px; border-radius: 8px; transition: all 0.3s ease; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" 
-           onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 4px 8px rgba(0,0,0,0.15))';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0.1))';">
+           class="logo-hover" 
+           style="height: 60px; width: auto; max-width: 120px; border-radius: 12px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); cursor: pointer;">
     </div>
     
     <div style="text-align: center;">
       <img src="{{ site.baseurl }}/assets/img/ucsd-logo.png" 
            alt="UC San Diego Logo" 
-           style="height: 60px; width: auto; max-width: 120px; border-radius: 8px; transition: all 0.3s ease; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" 
-           onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 4px 8px rgba(0,0,0,0.15))';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0.1))';">
+           class="logo-hover" 
+           style="height: 60px; width: auto; max-width: 120px; border-radius: 12px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); cursor: pointer;">
     </div>
     
     <div style="text-align: center;">
       <img src="{{ site.baseurl }}/assets/img/nanomood_logo.png" 
            alt="NanoMood Logo" 
-           style="height: 60px; width: auto; max-width: 120px; border-radius: 8px; transition: all 0.3s ease; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" 
-           onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 4px 8px rgba(0,0,0,0.15))';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0.1))';">
+           class="logo-hover" 
+           style="height: 60px; width: auto; max-width: 120px; border-radius: 12px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); cursor: pointer;">
     </div>
     
     <div style="text-align: center;">
       <img src="{{ site.baseurl }}/assets/img/intellect-logo.png" 
            alt="Intellect Design Logo" 
-           style="height: 60px; width: auto; max-width: 120px; border-radius: 8px; transition: all 0.3s ease; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" 
-           onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 4px 8px rgba(0,0,0,0.15))';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0.1))';">
+           class="logo-hover" 
+           style="height: 60px; width: auto; max-width: 120px; border-radius: 12px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); cursor: pointer;">
     </div>
     
     <div style="text-align: center;">
       <img src="{{ site.baseurl }}/assets/img/chapter-logo.png" 
            alt="Chapter Apps Logo" 
-           style="height: 60px; width: auto; max-width: 120px; border-radius: 8px; transition: all 0.3s ease; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" 
-           onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 4px 8px rgba(0,0,0,0.15))';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0.1))';">
+           class="logo-hover" 
+           style="height: 60px; width: auto; max-width: 120px; border-radius: 12px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); cursor: pointer;">
     </div>
   </div>
 </div>
+
+<style>
+.logo-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s;
+}
+
+.logo-hover:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2)) brightness(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.logo-hover:hover::before {
+  left: 100%;
+}
+
+.logo-hover:active {
+  transform: scale(1.05) rotate(1deg);
+  transition: all 0.1s ease;
+}
+</style>
 
