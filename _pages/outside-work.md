@@ -6,12 +6,71 @@ nav: true
 ---
 
 <!-- Quick links -->
-<div style="margin: 0 0 1rem 0; font-size: 0.95rem;">
+<div class="quick-links" style="margin: 0 0 1rem 0; font-size: 0.95rem;">
   <a href="#reading" style="margin-right: 1rem;">Reading</a>
   <a href="#listening" style="margin-right: 1rem;">Listening</a>
   <a href="#photos">Photos</a>
   
 </div>
+
+<style>
+/* Scoped hover effects for outside-work page */
+.quick-links a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.2rem 0.35rem;
+  border-radius: 6px;
+  transition: color 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+.quick-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,#FF6B6B,#4ECDC4,#45B7D1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease;
+}
+.quick-links a:hover {
+  background: rgba(0,0,0,0.04);
+  transform: translateY(-1px);
+}
+.quick-links a:hover::after {
+  transform: scaleX(1);
+}
+
+#content-wrap figure img {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 250ms ease, box-shadow 250ms ease, filter 250ms ease;
+}
+#content-wrap figure:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+  filter: saturate(1.05);
+}
+
+#content-wrap iframe {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 250ms ease, box-shadow 250ms ease, filter 250ms ease;
+}
+#content-wrap iframe:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-links a::after,
+  #content-wrap figure img,
+  #content-wrap iframe {
+    transition: none !important;
+  }
+}
+</style>
 
 <!-- Particles.js CDN -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
