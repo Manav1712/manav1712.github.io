@@ -253,8 +253,8 @@ plugins:
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
-  - jekyll-imagemagick
-  - jekyll-jupyter-notebook
+  # - jekyll-imagemagick  # disabled for GitHub Pages compatibility
+  # - jekyll-jupyter-notebook  # disabled for GitHub Pages compatibility (causes jinja2 import errors)
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
@@ -389,7 +389,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # disabled for GitHub Pages compatibility (ImageMagick not available on GitHub Pages)
   widths:
     - 480
     - 800
