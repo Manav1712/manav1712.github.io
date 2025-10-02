@@ -5,21 +5,35 @@ permalink: /outside-work/
 nav: true
 ---
 
+<!-- Quick links -->
+<div style="margin: 0 0 1rem 0; font-size: 0.95rem;">
+  <a href="#reading" style="margin-right: 1rem;">Reading</a>
+  <a href="#listening" style="margin-right: 1rem;">Listening</a>
+  <a href="#photos">Photos</a>
+  
+</div>
+
 <!-- Particles.js CDN -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <!-- Particles container -->
 <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
 
+<div id="content-wrap" style="max-width: 820px; margin: 0 auto; padding: 0 1rem;">
+
 this is what i enjoy doing in my day to day!
 
-## currently listening to -
+## <span id="reading"></span> reading
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5c371NuyisQkbKiIkadrri?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+- add your reading notes or a short list of favorites here
 
-## 📸 Photos
+## <span id="listening"></span> listening
 
-- Drop in some fun or memorable photos from travels, events, or daily life.
+<iframe title="Spotify playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5c371NuyisQkbKiIkadrri?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+## <span id="photos"></span> 📸 photos
+
+{% include figure.liquid path="/assets/img/spotify.png" alt="A placeholder image" caption="Sample image caption" max-width="700px" %}
 
 this page will keep growing as I find new things to share!
 
@@ -68,7 +82,8 @@ function thanksTypeWriter() {
 window.addEventListener('load', thanksTypeWriter);
 
 // Particles.js Configuration - Nyan Cat Theme
-particlesJS('particles-js', {
+function initParticles() {
+  particlesJS('particles-js', {
   particles: {
     number: {
       value: 80,
@@ -88,7 +103,7 @@ particlesJS('particles-js', {
       }
     },
     opacity: {
-      value: 10,
+      value: 0.5,
       random: false,
       anim: {
         enable: false,
@@ -169,5 +184,31 @@ particlesJS('particles-js', {
     }
   },
   retina_detect: true
-});
+  });
+}
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function shouldDisableParticles() {
+  return prefersReducedMotion.matches || window.innerWidth < 768;
+}
+
+function maybeStartOrStopParticles() {
+  const canvas = document.querySelector('#particles-js canvas');
+  if (shouldDisableParticles()) {
+    if (window.pJSDom && window.pJSDom.length) {
+      window.pJSDom.forEach((p) => p.pJS && p.pJS.fn.vendors.destroypJS());
+      window.pJSDom = [];
+    }
+    if (canvas) canvas.remove();
+  } else if (!window.pJSDom || !window.pJSDom.length) {
+    initParticles();
+  }
+}
+
+window.addEventListener('load', maybeStartOrStopParticles);
+window.addEventListener('resize', maybeStartOrStopParticles);
+prefersReducedMotion.addEventListener('change', maybeStartOrStopParticles);
 </script>
+
+</div>
