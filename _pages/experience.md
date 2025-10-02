@@ -7,6 +7,7 @@ nav: true
 
 Over the past few years, I’ve bounced between labs, startups, and dev teams — writing code, shipping features, and learning *a ton*. For more information about my internships, check out my cv!
 
+* Currently, I'm at **MathGPT.ai**, working on agents and RAG systems for math tutoring!
 * At **Rose Lab @ UCSD**, I wrangled epidemic simulations, built a FastAPI service, and got dangerously good at debugging GCP configs.
 * **Princeton's Research Computing** taught me how to write clean, scalable code that actually gets used (yes, those Jupyter tutorials are official now!).
 * At **NanoMood**, I dove deep into ML ops — designing pipelines, deploying on the cloud, and visualizing healthcare data with knowledge graphs.
