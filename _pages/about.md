@@ -16,7 +16,7 @@ social: false # includes social icons at the bottom of the page
 
 <span id="typing-text" style="font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace; font-size: 2rem;"></span>
 
-I recently completed my bachelor’s degree in Data Science at [UC San Diego](https://datascience.ucsd.edu/), where I worked with the [Rose Lab](https://roseyu.com/) on deploying epidemic simulators and AI models to production using FastAPI and GCP. I also spent time at [Princeton Research Computing](https://researchcomputing.princeton.edu/), where I contributed to algorithmic solvers for scientific research under Professor [Bartolomeo Stellato](https://stellato.io/).
+I recently completed my bachelor’s degree in Data Science at [UC San Diego](https://datascience.ucsd.edu/), where I worked with the [Rose Lab](https://roseyu.com/) on deploying epidemic simulators and AI models to production using FastAPI and GCP. I also spent time at [Princeton Research Computing](https://researchcomputing.princeton.edu/), where I contributed to algorithmic solvers for scientific research under Professor [Bartolomeo Stellato](https://stellato.io/). Currently, I'm working at [MathGPT.ai](https://mathgpt.ai/)!
 
 My research interests lie at the intersection of **machine learning**, **operations research**, and **personalized decision-making systems**, with applications in **healthcare**, **finance**, and **policy**. I'm particularly excited about problems involving uncertainty, optimization, and human-AI interaction.
 
