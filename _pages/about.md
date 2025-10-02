@@ -24,7 +24,6 @@ Recently, I completed a paper on Paid Family Leave and the gender wage gap, advi
 
 I’ve also held roles in applied ML and software engineering at NanoMood, Intellect Design Arena, and Chapter Apps, where I worked on everything from clinical knowledge graphs to LLM applications and front-end infrastructure.
 
-
 Outside of work, I enjoy playing poker, long-distance running, and music festivals. I’m always on the lookout for interesting playlists—feel free to share yours on Spotify.
 
 <script>

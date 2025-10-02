@@ -13,15 +13,15 @@ nav: true
 
 this is what i enjoy doing in my day to day!
 
+## currently listening to -
 
-## currently listening to - 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5c371NuyisQkbKiIkadrri?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ## 📸 Photos
+
 - Drop in some fun or memorable photos from travels, events, or daily life.
 
-
-this page will keep growing as I find new things to share! 
+this page will keep growing as I find new things to share!
 
 <div id="thanks-typing" style="font-family: 'Courier New', monospace; font-size: 20px; color: #333; margin: 30px 0; min-height: 40px; text-align: center; font-weight: bold;"></div>
 
@@ -171,4 +171,3 @@ particlesJS('particles-js', {
   retina_detect: true
 });
 </script>
-

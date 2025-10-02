@@ -53,7 +53,7 @@
       "summary": "Planned, designed and deployed 4 dynamic websites for online education and eCommerce. "
     }
   ],
- 
+
   "volunteer": [
     {
       "name": "Research Assistant",
@@ -63,7 +63,7 @@
       "startDate": "2022.10",
       "endDate": "2023.01",
       "summary": "Aided PhD students on a paper on Debiasing with Natural Language Feedback for Fair Interpretable Predictions"
-    },     
+    },
     {
       "name": "Student Quantitative Researcher",
       "location": "San Diego, CA",
@@ -79,20 +79,7 @@
     {
       "name": "Computer Science Related",
       "level": "Bachelor's Degree",
-      "keywords": [
-        "Python",
-        "Java",
-        "R",
-        "Scikit-Learn",
-        "TensorFlow",
-        "PyTorch",
-        "Pandas",
-        "Angular",
-        "OpenCV",
-        "Git",
-        "Docker",
-        "PostgreSQL"
-      ]
+      "keywords": ["Python", "Java", "R", "Scikit-Learn", "TensorFlow", "PyTorch", "Pandas", "Angular", "OpenCV", "Git", "Docker", "PostgreSQL"]
     }
   ],
   "languages": [

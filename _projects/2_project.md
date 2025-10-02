@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mushroom Analysis
-description: ''
+description: ""
 img: assets/img/mushroom.jpg
 importance: 2
 category: work

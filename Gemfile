@@ -6,13 +6,13 @@ group :jekyll_plugins do
     gem 'jekyll-email-protect'
     gem 'jekyll-feed'
     gem 'jekyll-get-json'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
+    # gem 'jekyll-imagemagick'  # disabled for GitHub Pages compatibility
+    # gem 'jekyll-jupyter-notebook'  # disabled for GitHub Pages compatibility
     gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
+    # gem 'jekyll-minifier'  # potentially unsupported on GitHub Pages
+    # gem 'jekyll-paginate-v2'  # potentially unsupported on GitHub Pages
     gem 'jekyll-regex-replace'
-    gem 'jekyll-scholar'
+    # gem 'jekyll-scholar'  # potentially unsupported on GitHub Pages
     gem 'jekyll-sitemap'
     gem 'jekyll-tabs'
     gem 'jekyll-toc'

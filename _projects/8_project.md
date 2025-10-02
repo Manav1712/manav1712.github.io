@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Custom Spotify Wrapped
-description: ''
+description: ""
 img: assets/img/spotify.jpg
 importance: 2
 category: work

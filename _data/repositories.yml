@@ -4,7 +4,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-    - Manav1712/Neural-Network-Viz 
-    - Manav1712/exploring-league-of-legends
-    - Manav1712/amazon_games
-    - Manav1712/mushroom-analysis
+  - Manav1712/Neural-Network-Viz
+  - Manav1712/exploring-league-of-legends
+  - Manav1712/amazon_games
+  - Manav1712/mushroom-analysis
