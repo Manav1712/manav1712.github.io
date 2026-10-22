@@ -22,7 +22,21 @@
 {% endif %}
 
 <!-- Fonts & Icons -->
-<link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
+{% if site.orcid_id
+  or site.scholar_userid
+  or site.semanticscholar_id
+  or site.publons_id
+  or site.lattes_id
+  or site.osf_id
+  or site.research_gate_profile
+  or site.ieee_id
+  or site.acm_id
+  or site.scopus_id
+  or site.dblp_url
+  or site.zotero_username
+%}
+  <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
+{% endif %}
 <link
   defer
   rel="stylesheet"
