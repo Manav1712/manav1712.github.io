@@ -43,8 +43,8 @@
 
 
 <!-- Fonts & Icons -->
-<link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5">
-<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+
+<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
 
 <!-- Code Syntax Highlighting -->
 <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
@@ -59,7 +59,7 @@
 
   <link rel="shortcut icon" href="/assets/img/download.png?d91c4fdd977c95cd4f4c2c3c975d5239">
 
-<link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
+<link rel="stylesheet" href="/assets/css/main.css?54e011fd930b97eb21c8c8680b55d8f8">
 <link rel="canonical" href="https://manav1712.github.io/outside-work/">
 
 <!-- Dark Mode -->
@@ -311,9 +311,6 @@
 }
 </style>
 
-<!-- Particles.js CDN -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
 <!-- Particles container -->
 <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
 
@@ -330,32 +327,6 @@ this is what i enjoy doing in my day to day!
 <iframe title="Spotify playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5c371NuyisQkbKiIkadrri?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ## <span id="photos"></span> 📸 photos
-
-
-
-<figure>
-  <picture>
-    <!-- Auto scaling with imagemagick -->
-    <!--
-      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
-      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
-    -->
-    
-    <img src="/assets/img/spotify.png" width="100%" height="auto" style="
-          
-          
-          
-            max-width: 700px;
-          
-          
-        " alt="A placeholder image" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-  </picture>
-
-  
-    <figcaption class="caption">Sample image caption</figcaption>
-  
-</figure>
-
 
 this page will keep growing as I find new things to share!
 
@@ -515,6 +486,21 @@ function shouldDisableParticles() {
   return prefersReducedMotion.matches || window.innerWidth < 768;
 }
 
+let particlesLoader = null;
+
+function loadParticlesLibrary() {
+  if (window.particlesJS) return Promise.resolve();
+  if (particlesLoader) return particlesLoader;
+  particlesLoader = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Failed to load particles.js'));
+    document.head.appendChild(script);
+  });
+  return particlesLoader;
+}
+
 function maybeStartOrStopParticles() {
   const canvas = document.querySelector('#particles-js canvas');
   if (shouldDisableParticles()) {
@@ -524,7 +510,11 @@ function maybeStartOrStopParticles() {
     }
     if (canvas) canvas.remove();
   } else if (!window.pJSDom || !window.pJSDom.length) {
-    initParticles();
+    loadParticlesLibrary().then(() => {
+      if (!shouldDisableParticles() && (!window.pJSDom || !window.pJSDom.length)) {
+        initParticles();
+      }
+    });
   }
 }
 
@@ -571,11 +561,6 @@ prefersReducedMotion.addEventListener('change', maybeStartOrStopParticles);
 <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
 
     
-  <!-- Masonry & imagesLoaded -->
-  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
-  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
-
 
     
 
@@ -612,29 +597,10 @@ prefersReducedMotion.addEventListener('change', maybeStartOrStopParticles);
 <!-- Jupyter Open External Links New Tab -->
 <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script>
 
+    
 
 
     
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-
-
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
-
-
-    
-  
-    <!-- MathJax -->
-    <script type="text/javascript">
-      window.MathJax = {
-        tex: {
-          tags: 'ams',
-        },
-      };
-    </script>
-    <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
-  
-
 
     
 
