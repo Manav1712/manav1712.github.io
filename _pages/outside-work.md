@@ -72,9 +72,6 @@ nav: true
 }
 </style>
 
-<!-- Particles.js CDN -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
 <!-- Particles container -->
 <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
 
@@ -91,8 +88,6 @@ this is what i enjoy doing in my day to day!
 <iframe title="Spotify playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5c371NuyisQkbKiIkadrri?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ## <span id="photos"></span> 📸 photos
-
-{% include figure.liquid path="/assets/img/spotify.png" alt="A placeholder image" caption="Sample image caption" max-width="700px" %}
 
 this page will keep growing as I find new things to share!
 
@@ -252,6 +247,21 @@ function shouldDisableParticles() {
   return prefersReducedMotion.matches || window.innerWidth < 768;
 }
 
+let particlesLoader = null;
+
+function loadParticlesLibrary() {
+  if (window.particlesJS) return Promise.resolve();
+  if (particlesLoader) return particlesLoader;
+  particlesLoader = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Failed to load particles.js'));
+    document.head.appendChild(script);
+  });
+  return particlesLoader;
+}
+
 function maybeStartOrStopParticles() {
   const canvas = document.querySelector('#particles-js canvas');
   if (shouldDisableParticles()) {
@@ -261,7 +271,11 @@ function maybeStartOrStopParticles() {
     }
     if (canvas) canvas.remove();
   } else if (!window.pJSDom || !window.pJSDom.length) {
-    initParticles();
+    loadParticlesLibrary().then(() => {
+      if (!shouldDisableParticles() && (!window.pJSDom || !window.pJSDom.length)) {
+        initParticles();
+      }
+    });
   }
 }
 
