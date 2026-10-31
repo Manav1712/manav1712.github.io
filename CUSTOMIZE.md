@@ -9,11 +9,9 @@ The project is structured as follows, focusing on the main components that you w
 ```txt
 .
 ├── 📂 assets/: contains the assets that are displayed in the website
-├── 📂 _bibliography/
-│   └── 📄 papers.bib: bibliography in BibTeX format
+├── 📂 _bibliography/: add papers.bib here to list publications
 ├── 📄 _config.yml: the configuration file of the template
 ├── 📂 _data/: contains some of the data used in the template
-│   ├── 📄 cv.yml: CV in YAML format, used when _data/resume.json is not found
 │   ├── 📄 resume.json: CV in JSON format (https://jsonresume.org/)
 │   └── 📄 repositories.yml: users and repositories info in YAML format
 ├── 📂 _includes/: contains code parts that are included in the main HTML file
@@ -43,9 +41,9 @@ All changes made to this file are only visible after you rebuild the website. Th
 
 ## Modifying the CV information
 
-There are currently 2 different ways of generating the CV page content. The first one is by using a json file located in [\_data/resume.json](_data/resume.json). It is a [known standard](https://jsonresume.org/) for creating a CV programmatically. The second one, currently used as a fallback when the json file is not found, is by using a yml file located in [\_data/cv.yml](_data/cv.yml). This was the original way of creating the CV page content and since it is more human readable than a json file we decided to keep it as an option.
+There are currently 2 different ways of generating the CV page content. The first one is by using a json file located in [\_data/resume.json](_data/resume.json). It is a [known standard](https://jsonresume.org/) for creating a CV programmatically. The second one, currently used as a fallback when the json file is not found, is a YAML file at `_data/cv.yml`. This was the original way of creating the CV page content and since it is more human readable than a json file we decided to keep it as an option.
 
-What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/cv.yml](_data/cv.yml). If you want to use the [\_data/cv.yml](_data/cv.yml) file as the source of your CV, you must delete the [\_data/resume.json](_data/resume.json) file.
+What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, the CV layout loads `_data/cv.yml`. If you want to use that file as the source of your CV, create it and delete [\_data/resume.json](_data/resume.json).
 
 ## Modifying the user and repository information
 
@@ -77,7 +75,7 @@ You can easily create your own collections, apps, short stories, courses, or wha
 
 ## Adding a new publication
 
-To add publications create a new entry in the [\_bibliography/papers.bib](_bibliography/papers.bib) file. You can find the BibTeX entry of a publication in Google Scholar by clicking on the quotation marks below the publication title, then clicking on "BibTeX", or also in the conference page itself. By default, the publications will be sorted by year and the most recent will be displayed first. You can change this behavior and more in the `Jekyll Scholar` section in [\_config.yml](_config.yml) file.
+To add publications, create `_bibliography/papers.bib` and add a new entry. You can find the BibTeX entry of a publication in Google Scholar by clicking on the quotation marks below the publication title, then clicking on "BibTeX", or also in the conference page itself. By default, the publications will be sorted by year and the most recent will be displayed first. You can change this behavior and more in the `Jekyll Scholar` section in [\_config.yml](_config.yml) file.
 
 You can add extra information to a publication, like a PDF file in the `assets/pdfs/` directory and add the path to the PDF file in the BibTeX entry with the `pdf` field. Some of the supported fields are: `abstract`, `altmetric`, `annotation`, `arxiv`, `bibtex_show`, `blog`, `code`, `dimensions`, `doi`, `eprint`, `html`, `isbn`, `pdf`, `pmid`, `poster`, `slides`, `supp`, `video`, and `website`.
 
@@ -91,7 +89,7 @@ scholar:
   first_name: [Albert, A.]
 ```
 
-If the entry matches one form of the last names and the first names, it will be underlined. Keep meta-information about your co-authors in [\_data/coauthors.yml](_data/coauthors.yml) and Jekyll will insert links to their webpages automatically. The co-author data format is as follows,
+If the entry matches one form of the last names and the first names, it will be underlined. Keep meta-information about your co-authors in `_data/coauthors.yml` and Jekyll will insert links to their webpages automatically. The co-author data format is as follows,
 
 ```yaml
 "adams":
